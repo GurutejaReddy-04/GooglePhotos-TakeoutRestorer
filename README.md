@@ -2,7 +2,7 @@
 
 A high-performance, robust desktop application to restore Google Photos metadata from JSON sidecar files directly into your image and video files (EXIF). Perfect for recovering your Google Takeout archive.
 
-![Google Photos Takeout Restorer](assets/screenshot_placeholder.png)
+![Google Photos Takeout Restorer](assets/screenshot.png)
 
 ## Features
 
