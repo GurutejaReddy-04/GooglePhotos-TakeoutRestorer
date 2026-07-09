@@ -1,5 +1,8 @@
 # -*- mode: python ; coding: utf-8 -*-
+import sys
+import os
 
+icon_path = os.path.join('assets', 'icon.ico') if sys.platform == 'win32' else None
 
 a = Analysis(
     ['main.py'],
@@ -32,7 +35,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['assets\\icon.ico'],
+    icon=[icon_path] if icon_path else None,
 )
 coll = COLLECT(
     exe,
