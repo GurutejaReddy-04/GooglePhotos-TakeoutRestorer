@@ -1,5 +1,5 @@
 """
-Core business logic module for Google Photos Takeout Fixer.
+Core business logic module for Google Photos Takeout Restorer.
 Contains all processing, matching, and metadata operations.
 """
 

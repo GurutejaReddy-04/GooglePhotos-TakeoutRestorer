@@ -1,5 +1,5 @@
 """
-Logging module for Google Photos Takeout Fixer.
+Logging module for Google Photos Takeout Restorer.
 Generates human-readable .log and machine-parseable .jsonl files.
 """
 
@@ -26,7 +26,7 @@ class ProcessingLogger:
         self._lock = threading.Lock()
         
         # Use run_id as logger name to prevent handler accumulation across runs
-        logger_name = f"TakeoutFixer_{self.run_id}"
+        logger_name = f"TakeoutRestorer_{self.run_id}"
         self.logger = logging.getLogger(logger_name)
         self.logger.setLevel(logging.DEBUG)
         

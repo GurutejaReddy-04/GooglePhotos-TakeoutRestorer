@@ -20,9 +20,9 @@ Google Photos Takeout Restorer relies on **Phil Harvey's ExifTool**. To ensure m
 
 ### Option 1: Download the Executable (Windows)
 
-1. Go to the [Releases](https://github.com/GurutejaReddy-04/GooglePhotos-TakeoutFixer/releases) page.
-2. Download the latest `GooglePhotosTakeoutFixer.zip`.
-3. Extract the folder and run `GooglePhotosTakeoutFixer.exe`. No installation required!
+1. Go to the [Releases](https://github.com/GurutejaReddy-04/GooglePhotos-TakeoutRestorer/releases) page.
+2. Download the latest `GooglePhotosTakeoutRestorer.zip`.
+3. Extract the folder and run `GooglePhotosTakeoutRestorer.exe`. No installation required!
 
 ### Option 2: Run from Source
 
@@ -32,7 +32,7 @@ Google Photos Takeout Restorer relies on **Phil Harvey's ExifTool**. To ensure m
 
 #### Setup
 ```bash
-git clone https://github.com/GurutejaReddy-04/GooglePhotos-TakeoutFixer.git
+git clone https://github.com/GurutejaReddy-04/GooglePhotos-TakeoutRestorer.git
 cd "Google Photos Takeout Restorer"
 
 # Create a virtual environment (optional but recommended)

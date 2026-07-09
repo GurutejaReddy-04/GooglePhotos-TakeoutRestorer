@@ -1,4 +1,4 @@
-# Contributing to Google Photos Takeout Fixer
+# Contributing to Google Photos Takeout Restorer
 
 Thank you for your interest in contributing! 
 

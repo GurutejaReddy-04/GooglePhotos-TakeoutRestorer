@@ -1,5 +1,5 @@
 """
-Main entry point for Google Photos Takeout Fixer.
+Main entry point for Google Photos Takeout Restorer.
 """
 
 import sys

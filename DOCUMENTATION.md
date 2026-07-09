@@ -55,9 +55,9 @@ The writer orchestrates the actual metadata injection. It includes a robust "aut
 
 ## 5. Build & Deployment
 The application is packaged into a single-file executable using **PyInstaller**. 
-The `GooglePhotosTakeoutFixer.spec` file defines the build constraints, ensuring CustomTkinter assets are bundled correctly.
+The `GooglePhotosTakeoutRestorer.spec` file defines the build constraints, ensuring CustomTkinter assets are bundled correctly.
 ```bash
-pyinstaller GooglePhotosTakeoutFixer.spec --clean -y
+pyinstaller GooglePhotosTakeoutRestorer.spec --clean -y
 ```
 
 ## 6. Error Handling
