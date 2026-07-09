@@ -1,0 +1,5 @@
+CustomTkinter==5.2.2
+timezonefinder==6.2.0
+python-dateutil==2.8.2
+pytz==2024.1
+windnd==1.0.7

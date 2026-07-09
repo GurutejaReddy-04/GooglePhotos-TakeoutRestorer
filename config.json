@@ -1,0 +1,25 @@
+{
+  "app_name": "Google Photos Takeout Fixer",
+  "version": "2.0.0",
+  "exiftool_path": "tools/exiftool.exe",
+  "supported_image_extensions": [
+    ".jpg", ".jpeg", ".png", ".heic", ".heif", 
+    ".webp", ".gif", ".tiff", ".tif", ".raw", 
+    ".dng", ".cr2", ".nef", ".arw", ".bmp"
+  ],
+  "supported_video_extensions": [
+    ".mp4", ".mov", ".m4v", ".3gp", ".avi", ".mkv", ".wmv"
+  ],
+  "live_photo_pairs": {
+    "image_ext": ".jpg",
+    "video_ext": ".mov"
+  },
+  "processing": {
+    "max_workers": 4,
+    "chunk_size": 100
+  },
+  "matching": {
+    "levenshtein_threshold": 3,
+    "min_truncation_length": 8
+  }
+}
