@@ -30,7 +30,7 @@ htmlcov/
 # PyInstaller
 *.manifest
 *.spec
-!GooglePhotosTakeoutFixer.spec
+!GooglePhotosTakeoutRestorer.spec
 
 # VS Code / IDE
 .vscode/
