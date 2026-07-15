@@ -27,7 +27,7 @@ def get_latest_exiftool_info() -> dict:
     else:
         asset_name = f'Image-ExifTool-{specific_version}.tar.gz'
         sf_link = f"https://master.dl.sourceforge.net/project/exiftool/{asset_name}?viasf=1"
-        expected_hash = "4d05a0f95d7156eeda51124801cb26daf01a6e31b335f79cbef15f4f26e7f9bd"
+        expected_hash = "668ea3acececb7235fbd0f4900e72d5f12c9b07e5c778fd36cb1e9b5828fd65a"
 
     try:
         req = urllib.request.Request(sf_link, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
