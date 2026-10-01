@@ -14,7 +14,7 @@ if root_dir not in sys.path:
 
 def print_runtime_diagnostics():
     """Print import paths so terminal runs reveal shadowed modules."""
-    if os.environ.get("TAKEOUT_FIXER_DEBUG_PATHS", "0") != "1":
+    if os.environ.get("TAKEOUT_RESTORER_DEBUG_PATHS", os.environ.get("TAKEOUT_FIXER_DEBUG_PATHS", "0")) != "1":
         return
 
     try:

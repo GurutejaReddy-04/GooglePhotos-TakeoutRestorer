@@ -12,6 +12,7 @@ from .processor import FileProcessor
 from .state_db import StateDatabase
 from .timezone_resolver import TimezoneResolver
 from .logger import ProcessingLogger
+from .downloader import ExifToolDownloader, SecurityError
 
 __all__ = [
     'FileScanner',
@@ -22,5 +23,7 @@ __all__ = [
     'FileProcessor',
     'StateDatabase',
     'TimezoneResolver',
-    'ProcessingLogger'
+    'ProcessingLogger',
+    'ExifToolDownloader',
+    'SecurityError'
 ]

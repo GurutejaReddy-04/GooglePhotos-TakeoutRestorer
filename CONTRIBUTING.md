@@ -5,15 +5,32 @@ Thank you for your interest in contributing!
 ## Development Setup
 
 1. Fork the repository and clone it locally.
-2. Create a virtual environment: `python -m venv venv`
-3. Activate the environment and install requirements: `pip install -r requirements.txt`
-4. Download ExifTool and place it in the `tools/` directory.
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   # On Windows:
+   venv\Scripts\activate
+   # On macOS/Linux:
+   source venv/bin/activate
+   ```
+3. Install runtime and development dependencies:
+   ```bash
+   pip install -r requirements-dev.txt
+   ```
+4. ExifTool Setup: ExifTool will be automatically downloaded and verified against its official checksum when running `python main.py`. Alternatively, you can manually place the approved `exiftool.exe` (Windows) or `exiftool` script (macOS/Linux) into the `tools/` directory.
+
+## Running Tests
+
+Run the deterministic test suite before submitting changes:
+```bash
+pytest tests/ -v
+```
 
 ## Pull Request Process
 
 1. Create a descriptive branch name (e.g., `feature/live-photo-support` or `bugfix/progress-bar-math`).
 2. Write clear commit messages.
-3. If you add a new feature, please try to test it end-to-end to ensure it doesn't break existing metadata injection.
+3. Ensure all automated tests pass (`pytest tests/ -v`). If you add a new feature, please include corresponding unit and integration tests under `tests/`.
 4. Submit your PR against the `main` branch.
 
 ## Code Style

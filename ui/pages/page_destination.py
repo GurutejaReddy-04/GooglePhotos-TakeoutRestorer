@@ -98,7 +98,7 @@ class PageDestination(ctk.CTkFrame):
         # Check write permissions by attempting to create a temp file
         try:
             path.mkdir(parents=True, exist_ok=True)
-            test_file = path / ".takeout_fixer_write_test"
+            test_file = path / ".takeout_restorer_write_test"
             test_file.touch()
             test_file.unlink()
         except PermissionError:

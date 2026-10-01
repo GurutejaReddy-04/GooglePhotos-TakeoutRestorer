@@ -375,7 +375,13 @@ class App(ctk.CTk):
     @staticmethod
     def _get_db_dir() -> Path:
         """Return (and create) a dedicated persistent directory for state databases."""
-        db_dir = Path.home() / ".takeout_fixer" / "runs"
+        db_dir = Path.home() / ".takeout_restorer" / "runs"
+        legacy_dir = Path.home() / ".takeout_fixer" / "runs"
+        if legacy_dir.exists() and not db_dir.exists():
+            try:
+                shutil.copytree(legacy_dir, db_dir)
+            except Exception:
+                pass
         db_dir.mkdir(parents=True, exist_ok=True)
         return db_dir
 

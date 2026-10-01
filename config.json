@@ -1,5 +1,5 @@
 {
-  "app_name": "Google Photos Takeout Fixer",
+  "app_name": "Google Photos Takeout Restorer",
   "version": "2.0.0",
   "exiftool_path": "tools/exiftool.exe",
   "supported_image_extensions": [

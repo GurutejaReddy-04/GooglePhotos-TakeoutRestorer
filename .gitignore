@@ -66,3 +66,5 @@ ruff_check.txt
 *.log
 *.jsonl
 Logs/
+benchmark_results*.json
+.download_staging/
