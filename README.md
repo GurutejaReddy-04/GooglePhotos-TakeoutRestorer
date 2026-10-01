@@ -1,6 +1,6 @@
 # Google Photos Takeout Restorer
 
-A high-performance, robust desktop application to restore Google Photos metadata from JSON sidecar files directly into your image and video files (EXIF). Perfect for recovering your Google Takeout archive.
+A desktop application that restores Google Photos metadata from JSON sidecar files directly into your image and video files (EXIF).
 
 ![Google Photos Takeout Restorer](assets/screenshot.png)
 
@@ -8,9 +8,9 @@ A high-performance, robust desktop application to restore Google Photos metadata
 
 - **Metadata Injection:** Merges `.json` sidecar files from Google Takeout directly into the EXIF data of the images (`.jpg`, `.png`, `.heic`, etc.) and videos (`.mp4`, `.mov`).
 - **Live Photo Support:** Properly pairs and injects timestamps into both the image and the video parts of Apple Live Photos, avoiding duplicates and double-counting progress.
-- **Timezone Correction:** Uses embedded GPS coordinates to intelligently correct UTC timestamps to your local timezone.
+- **Timezone Correction:** Uses embedded GPS coordinates to correct UTC timestamps to your local timezone.
 - **High Performance:** Utilizes Python's `ThreadPoolExecutor` and pre-warmed `ExifTool` daemon processes to rapidly process photo libraries using a multi-threaded worker pool (default 4 workers, up to 12 in High-Performance mode).
-- **Modern UI:** Built with CustomTkinter for a sleek, wizard-style user experience.
+- **User Interface:** Built with CustomTkinter providing a wizard-style interface.
 
 ---
 

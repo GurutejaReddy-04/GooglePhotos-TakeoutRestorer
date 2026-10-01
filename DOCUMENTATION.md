@@ -1,7 +1,7 @@
 # Google Photos Takeout Restorer - Technical Documentation
 
 ## 1. Project Overview
-Google Photos Takeout Restorer is a robust, high-performance cross-platform desktop application designed to process Google Takeout data. It merges `.json` sidecar files containing essential metadata back into image and video files (via EXIF/XMP). It runs on Windows, macOS, and Linux, and leverages CustomTkinter for a sleek wizard UI, alongside a parallelized Python background worker architecture that manages `ExifTool` daemon processes.
+Google Photos Takeout Restorer is a cross-platform desktop application designed to process Google Takeout data. It merges `.json` sidecar files containing essential metadata back into image and video files (via EXIF/XMP). It runs on Windows, macOS, and Linux, and uses CustomTkinter for its wizard UI, alongside a parallelized Python background worker architecture that manages `ExifTool` daemon processes.
 
 ## 2. Architecture & Execution Flow
 The system is divided into two primary tiers:
