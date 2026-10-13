@@ -23,23 +23,52 @@ The system is divided into two primary tiers:
 ## 3. Folder Structure
 ```text
 GooglePhotosTakeoutRestorer/
+├── .github/
+│   └── workflows/          # GitHub Actions (CI & packaging releases)
+│       ├── build.yml
+│       └── ci.yml
+├── assets/                 # Application icon and documentation screenshots
+│   ├── icon.ico
+│   └── screenshot.png
 ├── core/                   # Backend processing engine
-│   ├── downloader.py       # ExifTool binary downloader
-│   ├── exiftool_engine.py  # Persistent ExifTool process manager
-│   ├── matcher.py          # Fuzzy matching logic for JSON/Media
+│   ├── downloader.py       # ExifTool binary downloader & hash verification
+│   ├── exiftool_engine.py  # Persistent ExifTool process manager & pool
+│   ├── logger.py           # Structured JSONL and console processing logger
+│   ├── matcher.py          # Fuzzy matching heuristics for JSON/media pairs
 │   ├── parser.py           # Google Takeout JSON metadata parser
-│   ├── processor.py        # Concurrent pipeline dispatcher
-│   ├── progress_model.py   # Dataclass wrappers for progress reporting
-│   ├── scanner.py          # Multi-format ZIP/Folder indexer
-│   ├── state_db.py         # Thread-safe SQLite backend for state
-│   └── writer.py           # Exif injection & Auto-healing core logic
-├── ui/                     # Frontend interface
-│   ├── app.py              # Main CustomTkinter Application root
-│   └── pages/              # Wizard views (page_welcome.py, etc.)
+│   ├── processor.py        # Concurrent pipeline dispatcher & worker threads
+│   ├── progress_model.py   # Thread-safe telemetry & progress tracking model
+│   ├── scanner.py          # Multi-format archive (ZIP) & folder indexer
+│   ├── state_db.py         # Thread-safe SQLite backend for state persistence
+│   ├── timezone_resolver.py# Spatial coordinate-to-timezone resolution
+│   ├── utils.py            # Runtime executable base path resolver
+│   └── writer.py           # EXIF/XMP injection & auto-healing logic
+├── scripts/                # Benchmark and developer utilities
+│   └── benchmark_pipeline.py
+├── tests/                  # Automated test suites (35 tests)
+│   ├── conftest.py         # Pytest fixtures and synthetic media buffers
+│   ├── integration/        # End-to-end and concurrency pipeline tests
+│   ├── security/           # Path traversal and supply-chain tests
+│   └── unit/               # Module-level unit tests
 ├── tools/                  # (Ignored) Auto-downloaded ExifTool binaries
-├── main.py                 # Application Entry Point
-├── README.md               # User-facing project description
-└── DOCUMENTATION.md        # Technical architectural documentation
+│   ├── .gitkeep
+│   ├── exiftool.exe
+│   └── exiftool_files/
+├── ui/                     # Frontend interface (CustomTkinter)
+│   ├── app.py              # Main Application root and navigation controller
+│   └── pages/              # Wizard views (welcome, import, destination, etc.)
+├── .gitignore              # Git ignore rules
+├── build.bat               # Windows PyInstaller packaging script
+├── config.json             # Default application configurations
+├── CONTRIBUTING.md         # Open-source contribution guidelines
+├── DOCUMENTATION.md        # Technical architectural documentation
+├── GooglePhotosTakeoutRestorer.spec # PyInstaller freeze specification
+├── LICENSE                 # MIT License
+├── main.py                 # Application entry point & splash screen
+├── README.md               # User-facing project documentation
+├── requirements.txt        # Runtime production dependencies
+├── requirements-dev.txt    # Testing and developer dependencies
+└── SECURITY.md             # Security disclosures & checksum manifest
 ```
 
 ## 4. Module Descriptions
