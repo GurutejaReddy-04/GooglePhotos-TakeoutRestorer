@@ -59,6 +59,7 @@ GooglePhotosTakeoutRestorer/
 │   └── pages/              # Wizard views (welcome, import, destination, etc.)
 ├── .gitignore              # Git ignore rules
 ├── build.bat               # Windows PyInstaller packaging script
+├── run.bat                 # Windows one-click application launcher
 ├── config.json             # Default application configurations
 ├── CONTRIBUTING.md         # Open-source contribution guidelines
 ├── DOCUMENTATION.md        # Technical architectural documentation
