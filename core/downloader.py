@@ -106,11 +106,14 @@ class ExifToolDownloader:
                     return False
 
             # Verify runtime version execution
+            cmd = [str(self.exiftool_exe), "-ver"] if self.is_windows else ["perl", str(self.exiftool_exe), "-ver"]
+            creation_flags = subprocess.CREATE_NO_WINDOW if self.is_windows else 0
             proc = subprocess.run(
-                [str(self.exiftool_exe), "-ver"],
+                cmd,
                 capture_output=True,
                 text=True,
-                timeout=5
+                timeout=5,
+                creationflags=creation_flags
             )
             if proc.returncode != 0:
                 logger.warning(f"ExifTool execution check failed with return code {proc.returncode}.")
