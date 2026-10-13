@@ -18,7 +18,7 @@ class PageWelcome(ctk.CTkFrame):
         self.grid_columnconfigure(0, weight=1)
 
         self.title_label = ctk.CTkLabel(
-            self, text="Welcome to Google Photos Takeout Restorer",
+            self, text="Welcome to Takeout Restorer for Google Photos™",
             font=ctk.CTkFont(size=22, weight="bold")
         )
         self.title_label.grid(row=0, column=0, pady=(40, 5), sticky="n")
@@ -42,7 +42,16 @@ class PageWelcome(ctk.CTkFrame):
             font=ctk.CTkFont(size=15, weight="bold"),
             command=self._start_new
         )
-        self.new_btn.grid(row=3, column=0, pady=30, sticky="n")
+        self.new_btn.grid(row=3, column=0, pady=(20, 10), sticky="n")
+
+        # Trademark Disclaimer
+        self.disclaimer_label = ctk.CTkLabel(
+            self,
+            text="Google Photos™ and Google Takeout™ are trademarks of Google LLC.\nThis application is an independent open-source tool and is not affiliated with Google LLC.",
+            font=ctk.CTkFont(size=10),
+            text_color=("gray50", "gray50")
+        )
+        self.disclaimer_label.grid(row=4, column=0, pady=(5, 15), sticky="s")
 
         # Hide footer on this page
         self.app.hide_footer()

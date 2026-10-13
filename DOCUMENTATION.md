@@ -1,7 +1,9 @@
-# Google Photos Takeout Restorer - Technical Documentation
+# Takeout Restorer for Google Photos™ - Technical Documentation
+
+> **Trademark Notice:** Google Photos™ and Google Takeout™ are trademarks of Google LLC. This application is an independent open-source tool and is not affiliated with, sponsored by, or endorsed by Google LLC.
 
 ## 1. Project Overview
-Google Photos Takeout Restorer is a cross-platform desktop application designed to process Google Takeout data. It merges `.json` sidecar files containing essential metadata back into image and video files (via EXIF/XMP). It runs on Windows, macOS, and Linux, and uses CustomTkinter for its wizard UI, alongside a parallelized Python background worker architecture that manages `ExifTool` daemon processes.
+Takeout Restorer for Google Photos™ is a cross-platform desktop application designed to process Google Takeout data. It merges `.json` sidecar files containing essential metadata back into image and video files (via EXIF/XMP). It runs on Windows, macOS, and Linux, and uses CustomTkinter for its wizard UI, alongside a parallelized Python background worker architecture that manages `ExifTool` daemon processes.
 
 ## 2. Architecture & Execution Flow
 The system is divided into two primary tiers:
@@ -63,7 +65,7 @@ GooglePhotosTakeoutRestorer/
 ├── config.json             # Default application configurations
 ├── CONTRIBUTING.md         # Open-source contribution guidelines
 ├── DOCUMENTATION.md        # Technical architectural documentation
-├── GooglePhotosTakeoutRestorer.spec # PyInstaller freeze specification
+├── TakeoutRestorer.spec    # PyInstaller freeze specification
 ├── LICENSE                 # MIT License
 ├── main.py                 # Application entry point & splash screen
 ├── README.md               # User-facing project documentation
@@ -85,9 +87,9 @@ The writer orchestrates the actual metadata injection. It includes a robust "aut
 
 ## 5. Build & Deployment
 The application is packaged into a single-file executable using **PyInstaller**. 
-The `GooglePhotosTakeoutRestorer.spec` file defines the build constraints, ensuring CustomTkinter assets are bundled correctly.
+The `TakeoutRestorer.spec` file defines the build constraints, ensuring CustomTkinter assets are bundled correctly.
 ```bash
-pyinstaller GooglePhotosTakeoutRestorer.spec --clean -y
+pyinstaller TakeoutRestorer.spec --clean -y
 ```
 
 ## 6. Error Handling

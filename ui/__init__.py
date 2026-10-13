@@ -1,3 +1,3 @@
 """
-UI module for Google Photos Takeout Restorer.
+UI module for Takeout Restorer for Google Photos.
 """

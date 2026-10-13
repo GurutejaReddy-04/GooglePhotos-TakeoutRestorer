@@ -16,14 +16,14 @@ jobs:
         os: [windows-latest, macos-latest, ubuntu-latest]
         include:
           - os: windows-latest
-            artifact_name: GooglePhotosTakeoutRestorer-Windows
-            asset_name: GooglePhotosTakeoutRestorer-Windows.zip
+            artifact_name: TakeoutRestorer-Windows
+            asset_name: TakeoutRestorer-Windows.zip
           - os: macos-latest
-            artifact_name: GooglePhotosTakeoutRestorer-macOS
-            asset_name: GooglePhotosTakeoutRestorer-macOS.zip
+            artifact_name: TakeoutRestorer-macOS
+            asset_name: TakeoutRestorer-macOS.zip
           - os: ubuntu-latest
-            artifact_name: GooglePhotosTakeoutRestorer-Linux
-            asset_name: GooglePhotosTakeoutRestorer-Linux.zip
+            artifact_name: TakeoutRestorer-Linux
+            asset_name: TakeoutRestorer-Linux.zip
 
     steps:
     - name: Checkout repository
@@ -42,17 +42,17 @@ jobs:
 
     - name: Build with PyInstaller
       run: |
-        pyinstaller GooglePhotosTakeoutRestorer.spec --clean -y
+        pyinstaller TakeoutRestorer.spec --clean -y
 
     - name: Zip the build folder (Windows)
       if: matrix.os == 'windows-latest'
       run: |
-        Compress-Archive -Path dist\GooglePhotosTakeoutRestorer -DestinationPath ${{ matrix.asset_name }}
+        Compress-Archive -Path dist\TakeoutRestorer -DestinationPath ${{ matrix.asset_name }}
 
     - name: Zip the build folder (macOS & Linux)
       if: matrix.os != 'windows-latest'
       run: |
-        zip -r ${{ matrix.asset_name }} dist/GooglePhotosTakeoutRestorer
+        zip -r ${{ matrix.asset_name }} dist/TakeoutRestorer
 
     - name: Upload artifact to workflow run
       uses: actions/upload-artifact@v4

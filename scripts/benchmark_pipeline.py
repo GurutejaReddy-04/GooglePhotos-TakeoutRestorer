@@ -1,8 +1,5 @@
 """
-Deterministic Benchmarking Harness for Google Photos Takeout Restorer.
-
-Measures throughput (files/sec), elapsed time, and CPU utilization across
-Normal Mode (4 workers) and High-Performance Mode (up to 12 workers).
+Deterministic Benchmarking Harness for Takeout Restorer for Google Photos.
 """
 
 import sys
@@ -106,7 +103,7 @@ def run_benchmark(input_dir: Path, output_dir: Path, high_performance: bool) -> 
     db = StateDatabase(db_file)
     
     config = {
-        "app_name": "Google Photos Takeout Restorer",
+        "app_name": "Takeout Restorer for Google Photos",
         "supported_image_extensions": [".jpg", ".jpeg", ".png"],
         "supported_video_extensions": [".mp4", ".mov"],
         "processing": {"max_workers": 4, "chunk_size": 100},
@@ -167,7 +164,7 @@ def run_benchmark(input_dir: Path, output_dir: Path, high_performance: bool) -> 
     }
 
 def main():
-    parser = argparse.ArgumentParser(description="Google Photos Takeout Restorer Benchmark")
+    parser = argparse.ArgumentParser(description="Takeout Restorer for Google Photos Benchmark")
     parser.add_argument("--count", type=int, default=1000, help="Total synthetic media files to benchmark (default: 1000)")
     parser.add_argument("--quick", action="store_true", help="Quick smoke benchmark (100 files)")
     parser.add_argument("--out", type=str, default="benchmark_results.json", help="Output path for JSON report")

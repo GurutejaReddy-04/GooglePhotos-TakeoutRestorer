@@ -1,8 +1,10 @@
-# Google Photos Takeout Restorer
+# Takeout Restorer for Google Photos™
 
-A desktop application that restores Google Photos metadata from JSON sidecar files directly into your image and video files (EXIF).
+A desktop application that restores Google Photos™ metadata from JSON sidecar files directly into your image and video files (EXIF).
 
-![Google Photos Takeout Restorer](assets/screenshot.png)
+![Takeout Restorer for Google Photos](assets/screenshot.png)
+
+> **Trademark Notice:** Google Photos™ and Google Takeout™ are trademarks of Google LLC. This project is an independent open-source tool and is not affiliated with, sponsored by, or endorsed by Google LLC.
 
 ## Features
 
@@ -16,7 +18,7 @@ A desktop application that restores Google Photos metadata from JSON sidecar fil
 
 ## 🚀 Project Evolution: Python Prototype → Rust Rewrite
 
-This repository represents the **original Python reference implementation** of Google Photos Takeout Restorer. 
+This repository represents the **original Python reference implementation** of Takeout Restorer for Google Photos. 
 
 To overcome platform packaging trade-offs and maximize throughput, a full native rewrite was subsequently built in Rust:
 👉 **[GooglePhotos-TakeoutRestorer-Rust](https://github.com/GurutejaReddy-04/GooglePhotos-TakeoutRestorer-Rust)**
@@ -33,7 +35,7 @@ Both repositories remain public to document this architectural evolution.
 
 ## Core Dependency & Supply-Chain Security
 
-Google Photos Takeout Restorer relies on **Phil Harvey's ExifTool**. To ensure maximum stability and supply-chain integrity:
+Takeout Restorer relies on **Phil Harvey's ExifTool**. To ensure maximum stability and supply-chain integrity:
 - The application automatically downloads and verifies **ExifTool version 13.59** against pinned cryptographic SHA-256 checksums from official distribution mirrors.
 - If checksum verification fails or an unmanifested version is encountered, the installer fails closed and aborts execution.
 - The executable is isolated in the local `tools/` directory.
@@ -55,8 +57,8 @@ Google Photos Takeout Restorer relies on **Phil Harvey's ExifTool**. To ensure m
 ### Option 1: Download the Executable (Windows)
 
 1. Go to the [Releases](https://github.com/GurutejaReddy-04/GooglePhotos-TakeoutRestorer/releases) page.
-2. Download the latest `GooglePhotosTakeoutRestorer.zip`.
-3. Extract the folder and run `GooglePhotosTakeoutRestorer.exe`. No installation required!
+2. Download the latest `TakeoutRestorer-Windows.zip`.
+3. Extract the folder and run `TakeoutRestorer.exe`. No installation required!
 
 ### Option 2: Run from Source
 
@@ -121,9 +123,9 @@ build.bat
 
 **Cross-Platform (Manual):**
 ```bash
-pyinstaller GooglePhotosTakeoutRestorer.spec --clean -y
+pyinstaller TakeoutRestorer.spec --clean -y
 ```
-The resulting executable package will be available in the `dist/GooglePhotosTakeoutRestorer/` directory.
+The resulting executable package will be available in the `dist/TakeoutRestorer/` directory.
 
 ---
 

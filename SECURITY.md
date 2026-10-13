@@ -1,7 +1,7 @@
 # Security Policy
 
 ## Overview
-Google Photos Takeout Restorer is designed with strict data privacy and supply-chain integrity controls to safely handle personal photo archives.
+Takeout Restorer for Google Photos is designed with strict data privacy and supply-chain integrity controls to safely handle personal photo archives.
 
 ## Privacy & Local Processing Guarantee
 - **Local Execution:** Media processing is performed strictly on your local device.
@@ -10,7 +10,7 @@ Google Photos Takeout Restorer is designed with strict data privacy and supply-c
 - **GPS Metadata:** GPS coordinates from Google Takeout `.json` sidecar files are only re-embedded into media files when the GPS restoration setting is explicitly enabled. GPS data is never transmitted off-device.
 
 ## ExifTool Supply-Chain Integrity
-Google Photos Takeout Restorer relies on Phil Harvey's ExifTool for metadata manipulation. To guarantee supply-chain integrity:
+Takeout Restorer relies on Phil Harvey's ExifTool for metadata manipulation. To guarantee supply-chain integrity:
 1. **Pinned Manifest:** All downloaded artifacts are pinned in `core/downloader.py` with known SHA-256 cryptographic checksums.
 2. **Fail-Closed Acquisition:** If an archive does not match the official pinned SHA-256 hash or is not listed in the verified manifest, the download is immediately rejected, deleted, and execution is aborted.
 3. **Archive Traversal Protection:** Extraction routines enforce strict path-traversal safeguards, rejecting any archive entries containing relative (`..`) or absolute path navigation.

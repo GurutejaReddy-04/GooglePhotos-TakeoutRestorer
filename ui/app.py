@@ -29,7 +29,7 @@ class App(ctk.CTk):
         super().__init__()
 
         # Window configuration
-        self.title("Google Photos Takeout Restorer")
+        self.title("Takeout Restorer for Google Photos")
         self.geometry("1000x750")
         self.minsize(900, 650)
 
@@ -70,7 +70,7 @@ class App(ctk.CTk):
         
         self.header_label = ctk.CTkLabel(
             self.header_frame,
-            text="Google Photos Takeout Restorer",
+            text="Takeout Restorer for Google Photos",
             font=ctk.CTkFont(size=20, weight="bold")
         )
         self.header_label.grid(row=0, column=0, padx=25, pady=18, sticky="w")
@@ -163,7 +163,7 @@ class App(ctk.CTk):
             self.theme_menu.set(new_theme)
 
     DEFAULT_CONFIG = {
-        "app_name": "Google Photos Takeout Restorer",
+        "app_name": "Takeout Restorer for Google Photos",
         "version": "2.0.0",
         "exiftool_path": "tools/exiftool.exe",
         "supported_image_extensions": [

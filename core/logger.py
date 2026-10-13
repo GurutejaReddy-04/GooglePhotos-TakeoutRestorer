@@ -1,5 +1,5 @@
 """
-Logging module for Google Photos Takeout Restorer.
+Logging module for Takeout Restorer for Google Photos.
 Generates human-readable .log and machine-parseable .jsonl files.
 """
 

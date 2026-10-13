@@ -1,6 +1,6 @@
 @echo off
 cd /d "%~dp0"
-echo Starting Google Photos Takeout Restorer...
+echo Starting Takeout Restorer for Google Photos...
 
 if exist "C:\Users\GURUTEJAREDDY\.conda\envs\takeout_py311\python.exe" (
     "C:\Users\GURUTEJAREDDY\.conda\envs\takeout_py311\python.exe" main.py
