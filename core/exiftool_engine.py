@@ -230,10 +230,14 @@ class ExifToolEngine:
         # Add tag arguments
         for tag, value in tags.items():
             if value is not None:
-                args.append(f"-{tag}={value}")
+                # Strip newlines to prevent command/argument injection in -stay_open stdin
+                clean_tag = str(tag).replace("\r", "").replace("\n", "")
+                clean_value = str(value).replace("\r", " ").replace("\n", " ")
+                args.append(f"-{clean_tag}={clean_value}")
 
-        # Add file path
-        args.append(file_path)
+        # Add file path (strip newlines)
+        clean_file_path = file_path.replace("\r", "").replace("\n", "")
+        args.append(clean_file_path)
 
         logger.debug("Writing metadata to: %s", file_path)
 

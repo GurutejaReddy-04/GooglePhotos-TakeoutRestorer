@@ -454,7 +454,7 @@ class MetadataWriter:
 
     def _extract_jit(self, virtual_path: str, output_dir: Path, target_path_override: Optional[Path] = None) -> Path:
         """Extracts a virtual path from a zip to a temporary file, or directly to a target path."""
-        parts = virtual_path[6:].split("::")
+        parts = virtual_path[6:].split("::", 1)
         zip_path = Path(parts[0])
         internal_path = parts[1]
         
